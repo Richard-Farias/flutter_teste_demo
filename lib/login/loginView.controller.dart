@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/User_List.dart';
 import 'package:myapp/home/home.view.dart';
+import 'package:myapp/main.dart';
 import 'package:myapp/model/user.model.dart';
 
 
@@ -14,8 +15,8 @@ class LoginController extends GetxController {
   final RxList <User> userList = RxList();
     void onInit(){
       super.onInit();
-      userList.add(User('Riri','123'));
-      userList.add(User('Roro','1234'));
+      userList.add(User('user1','123'));
+      userList.add(User('user2','1234'));
   
   }
     
@@ -54,8 +55,8 @@ class LoginController extends GetxController {
   // }
 
   void login(){
-   Get.to(HomeView());
-  } 
+      Get.to(HomeView());
+    } 
 
   void error (String error){
     print(error);
